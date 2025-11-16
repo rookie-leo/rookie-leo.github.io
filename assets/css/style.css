@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f7f7f7;
+    color: #222;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav a {
+    color: #ddd;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: white;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.post-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.post-card h2 {
+    margin-top: 0;
+}
+
+footer {
+    text-align: center;
+    color: #999;
+    margin: 40px 0;
+}
