@@ -40,6 +40,42 @@ main {
     margin-top: 0;
 }
 
+.intro {
+    background-image: url(../img/capa_de_fundo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+
+    color: #fff;
+    backdrop-filter: brightness(0.9); 
+}
+
+.intro p {
+    background: rgba(0,0,0,0.4);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.intro a {
+    color: #e7356b;
+    font-weight: bold;
+    text-decoration: underline;
+
+    text-shadow: 0 0 6px #4caf50,
+                0 0 12px #4caf50,
+                0 0 18px #4caf50;
+}
+
+.intro a:hover {
+    color: #81c784;
+    text-shadow: 0 0 8px #81c784,
+                0 0 16px #81c784,
+                0 0 24px #81c784;
+}
+
 footer {
     text-align: center;
     color: #999;
