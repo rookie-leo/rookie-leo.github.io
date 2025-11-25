@@ -1,9 +1,19 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f7f7f7;
-    color: #222;
+  margin: 0;
+  background: linear-gradient(
+      135deg,
+      rgb(1, 41, 103) 0%,
+      rgb(1, 76, 149) 15%,
+      rgb(0, 158, 192) 35%,
+      rgb(1, 205, 225) 55%,
+      rgb(139, 110, 171) 75%,
+      rgb(4, 26, 74) 100%
+    );
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
 }
+
 
 header {
     background: #222;
@@ -77,7 +87,8 @@ main {
 }
 
 footer {
+    background: #222;
+    color: white;
+    padding: 5px;
     text-align: center;
-    color: #999;
-    margin: 40px 0;
 }
