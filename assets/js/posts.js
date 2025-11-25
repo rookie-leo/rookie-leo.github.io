@@ -1,9 +1,16 @@
 const posts = [
     {
-        id: "exemplo",
-        title: "Meu primeiro artigo",
-        date: "2025-02-20",
-        summary: "Este é um exemplo de artigo escrito em Markdown.",
-        file: "posts/exemplo.md"
+        id: "ollama",
+        title: "Ollama — Executando Modelos de Linguagem Localmente",
+        date: "2025-01-01",
+        summary: "Aprenda como instalar, rodar e usar o Ollama com modelos locais.",
+        file: "assets/posts/ollama-executando-modelos-de-linguagem-localmente.html"
+    },
+    {
+        id: "github-pages",
+        title: "Como hospedei meu blog no GitHub Pages",
+        date: "2025-01-15",
+        summary: "Passo a passo oficial para publicar sites estáticos gratuitamente.",
+        file: "assets/posts/static-site-gh-pages.html"
     }
 ];
