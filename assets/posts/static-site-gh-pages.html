@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Como criar um site estático com GitHub Pages</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/posts.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Leonardo.DEV</h1>
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/about.html">Sobre</a>
+      </nav>
+    </header>
+    <div class="post-container">
+      <h1>Como criar um site estático com GitHub Pages</h1>
+      <p class="post-date">Publicado em 25/11/2025</p>
+      <h2 id="introducao">Bate-papo rápido</h2>
+      <p>
+        “Por que não usar uma plataforma já existente?” você deve estar se
+        perguntando.
+        No meu caso, a resposta é simples: eu quero desenvolver, aprimorar e
+        testar
+        minhas habilidades como desenvolvedor — desde o back-end até o front-end
+        e também a parte de implantação. Hoje tudo está em um nível simples, mas
+        no
+        futuro pretendo criar uma pipeline de deploy com CI/CD.
+        <br><br>
+        No momento deste post, o blog está hospedado no
+        <a
+          href="https://docs.github.com/pt/pages/getting-started-with-github-pages/what-is-github-pages"
+          target="_blank">
+          GitHub Pages
+        </a>. Porém, quando eu decidir implementar funcionalidades como sistema
+        de likes,
+        comentários ou outras interações, provavelmente vou precisar de um
+        back-end, e
+        o GitHub Pages não oferece esse suporte. Isso pode eventualmente me
+        levar a migrar
+        para a AWS — mas esse é assunto para outro post. Agora se você, assim
+        como eu, quer
+        criar seu próprio site estático, vamos seguir com
+        o hands-on!
+      </p>
+
+      <h2 id="introducao">Introdução</h2>
+      <p>
+        O GitHub Pages permite que você hospede sites estáticos gratuitamente
+        diretamente de um repositório GitHub. Você pode usar HTML, CSS e
+        JavaScript, sem necessidade de servidor backend.
+        Segundo a documentação oficial: “GitHub Pages publica qualquer arquivo
+        estático do qual você faz push no repositório.”
+      </p>
+
+      <h2 id="passo1">1. Crie um repositório no GitHub</h2>
+      <p>
+        Acesse o GitHub e crie um novo repositório. Você pode usar um
+        repositório existente ou criar um novo, conforme a <a
+          href="https://docs.github.com/pt/pages/getting-started-with-github-pages/what-is-github-pages"
+          target="_blank">documentação
+          oficial
+          do GitHub Pages</a>.
+        Se for criar do zero, dê um nome relevante (por exemplo, `meu-blog`) e
+        adicione um README.
+      </p>
+
+      <h2 id="passo2">2. Crie o arquivo de entrada do site</h2>
+      <p>
+        Na branch que você escolheu para publicar, crie um arquivo
+        `index.html` (ou `index.md`). O GitHub Pages usará esse arquivo como
+        ponto de partida do seu site.
+      </p>
+
+      <h2 id="passo3">3. Configure o GitHub Pages</h2>
+      <p>
+        Vá até a aba <strong>Settings → Pages</strong> no repositório.
+        Em “Source” (“Origem”), selecione a branch (por exemplo, `main`) e a
+        pasta raiz (`root`) para publicar.
+      </p>
+
+      <h2 id="passo4">4. Publique e veja seu site</h2>
+      <p>
+        Após a configuração, o GitHub Pages começará a publicar seu site. Pode
+        levar alguns minutos para que o deploy apareça.
+        Você poderá acessar via `https://seu-usuario.github.io/nome-do-repo/`
+        (ou domínio personalizado, se configurado).
+      </p>
+
+      <h2 id="passo5">5. Próximas etapas</h2>
+      <p>
+        Agora que você tem um site estático no ar, pode adicionar mais páginas
+        HTML, CSS customizado, JavaScript e até posts estáticos.
+        Se quiser usar geradores de site estático (como Jekyll, Hugo, etc.),
+        você pode seguir a documentação oficial para gerar conteúdo.
+      </p>
+
+      <h2 id="dica-extra">Dica extra</h2>
+      <p>
+        Você também pode criar uma branch <b>dev</b> e enviar suas alterações
+        para ela
+        antes de fazer o merge para a branch <b>main</b>. Isso mantém o fluxo de
+        trabalho
+        mais organizado e torna o processo mais profissional.
+        Espero que tenha gostado do conteúdo e se te ajudou em algo, compartilha 
+        para que esse conteudo ajude outros também. 
+        <br>
+        Até a próxima!
+      </p>
+      <a class="back-link" href="/index.html">← Voltar</a>
+    </div>
+  </body>
+
+</html>
