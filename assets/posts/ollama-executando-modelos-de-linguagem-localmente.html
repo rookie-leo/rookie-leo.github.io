@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ollama — Executando Modelos de Linguagem Localmente</title>
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/posts.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Leonardo.DEV</h1>
+            <nav>
+                <a href="/index.html">Home</a>
+                <a href="/about.html">Sobre</a>
+            </nav>
+        </header>
+
+        <div class="post-container">
+
+            <h1>Ollama: Executando Modelos de Linguagem Localmente</h1>
+            <p class="post-date">Publicado em 25/11/2025</p>
+            <p>Nos últimos anos, os modelos de linguagem (LLMs) se tornaram
+                ferramentas indispensáveis para desenvolvedores, pesquisadores e
+                criadores de conteúdo. No entanto, muitas dessas tecnologias
+                dependem de processamento em nuvem, o que pode gerar limitações
+                relacionadas a custo, privacidade, latência e conectividade.
+                Nesse cenário surge o Ollama, uma plataforma que facilita a
+                execução de grandes modelos de linguagem localmente, diretamente
+                no seu computador — sem necessidade de internet e com foco em
+                simplicidade, segurança e performance.
+                Neste artigo, você vai aprender:
+            </p>
+            <div class="toc">
+                <h3>📚 Sumário</h3>
+                <ul>
+                    <li><a href="#oque-e-ollama">O que é o Ollama?</a></li>
+                    <li><a href="#como-funciona">Como funciona o
+                            Ollama?</a></li>
+                    <li><a href="#vantagens">Vantagens</a></li>
+                    <li><a href="#limitacoes">Limitações</a></li>
+                    <li><a href="#instalacao">Instalação</a></li>
+                    <li><a href="#instalando-modelos">Instalando
+                            Modelos</a></li>
+                    <li><a href="#rodando-modelos">Rodando um Modelo</a></li>
+                    <li><a href="#exemplos">Exemplos Práticos</a></li>
+                    <li><a href="#conclusao">Conclusão</a></li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <h2 id="oque-e-ollama">O que é o Ollama?</h2>
+            <p>
+                O <strong>Ollama</strong> é uma plataforma de código aberto
+                projetada para executar
+                modelos de linguagem grandes diretamente no computador do
+                usuário. Ele permite gerar textos,
+                auxiliar em programação e realizar tarefas de IA de forma
+                privada e eficiente, sem depender da nuvem.
+            </p>
+
+            <div class="info-box">
+                💡 <strong>Privacidade total:</strong> tudo roda localmente —
+                nenhum dado é enviado para servidores externos.
+            </div>
+
+            <h2 id="como-funciona">Como funciona o Ollama?</h2>
+
+            <p>
+                O Ollama utiliza uma engine otimizada em Go e C++ para rodar
+                modelos localmente usando CPU ou GPU,
+                dependendo do hardware. Ele suporta modelos no formato
+                <strong>GGUF</strong>, que são versões
+                otimizadas dos grandes modelos de linguagem recentes.
+            </p>
+
+            <ul>
+                <li>Llama 3</li>
+                <li>Mistral</li>
+                <li>Gemma</li>
+                <li>Phi</li>
+                <li>NeuralChat</li>
+                <li>entre outros…</li>
+            </ul>
+
+            <p>Esses modelos são quantizados, ou seja, reduzidos para ocupar
+                menos memória e permitir execução em máquinas comuns.</p>
+
+            <h2 id="vantagens">Vantagens</h2>
+            <ul>
+                <li><strong>Privacidade</strong>: todos os dados ficam no seu
+                    computador — nada vai para a nuvem.</li>
+                <li><strong>Zero custo recorrente</strong>: sem tokens, créditos
+                    ou APIs pagas.</li>
+                <li><strong>Instalação simples</strong>: basta um comando.</li>
+                <li><strong>Ótima performance</strong> em GPUs compatíveis
+                    (NVIDIA ou Apple Silicon).</li>
+            </ul>
+
+            <h2 id="limitacoes">Limitações</h2>
+            <ul>
+                <li>Modelos grandes exigem bastante RAM ou GPU potente.</li>
+                <li>Nem todos os recursos de IA da nuvem estão disponíveis (como
+                    RAG avançado).</li>
+                <li>Execução maior em CPU pode ser lenta.</li>
+                <li>Não substitui serviços corporativos como Bedrock ou OpenAI
+                    API.</li>
+            </ul>
+
+            <h2 id="instalacao">Instalação</h2>
+
+            <ol>
+                <li>Acesse: <a href="https://ollama.com"
+                        target="_blank">https://ollama.com</a></li>
+                <li>Baixe para:
+                    <ul>
+                        <li>Windows</li>
+                        <li>macOS</li>
+                        <li>Linux</li>
+                    </ul>
+                </li>
+                <li>Abra o terminal e execute:
+                    <pre><code>ollama</code></pre>
+                </li>
+                <li>Se o menu de ajuda aparecer, tudo está funcionando.</li>
+            </ol>
+
+            <div class="alert-box">
+                ⚠️ Caso o comando <code>ollama</code> não funcione no Windows,
+                reinicie o terminal ou o computador — o instalador adiciona o
+                Ollama ao PATH.
+            </div>
+
+            <h2 id="instalando-modelos">Instalando Modelos</h2>
+
+            <p>Baixe qualquer modelo com:</p>
+            <pre><code>ollama pull &lt;modelo&gt;</code></pre>
+
+            <p><strong>Exemplos:</strong></p>
+            <ul>
+                <li><code>ollama pull llama3.1</code></li>
+                <li><code>ollama pull mistral</code></li>
+                <li><code>ollama pull gemma:2b</code></li>
+            </ul>
+
+            <p>Para listar os modelos instalados:</p>
+            <pre><code>ollama list</code></pre>
+
+            <h2 id="rodando-modelos">Rodando um Modelo</h2>
+
+            <pre><code>ollama run &lt;modelo&gt;</code></pre>
+
+            <p><strong>Exemplos:</strong></p>
+            <ul>
+                <li><code>ollama run llama3.1</code></li>
+                <li><code>ollama run mistral</code></li>
+            </ul>
+
+            <p>Quando aparecer o campo de envio de mensagem, você pode começar a
+                conversar com o modelo.</p>
+
+            <h2 id="exemplos">Exemplos Práticos</h2>
+
+            <ol>
+                <li><strong>Resumir textos:</strong>
+                    <pre><code>ollama run llama3.1 "Resuma o texto: A computação em nuvem permite..."</code></pre>
+                </li>
+
+                <li><strong>Gerar código:</strong>
+                    <pre><code>ollama run mistral "Crie uma função Java que filtre uma lista de usuários."</code></pre>
+                </li>
+
+                <li><strong>Explicar logs:</strong>
+                    <pre><code>ollama run llama3.1 "Explique esse stacktrace: &lt;cole o stacktrace&gt;"</code></pre>
+                </li>
+
+                <li><strong>Criar conteúdo:</strong>
+                    <pre><code>ollama run llama3.1 "Escreva um título para artigo sobre arquitetura de microsserviços."</code></pre>
+                </li>
+            </ol>
+
+            <h2 id="conclusao">Conclusão</h2>
+
+            <p>
+                O Ollama permite executar modelos de linguagem de forma local,
+                simples e privada.
+                Agora você já sabe como instalar, rodar e testar seus primeiros
+                modelos.
+                A partir daqui, pode explorar o enorme potencial que essa
+                ferramenta oferece.
+            </p>
+
+            <a class="back-link" href="/index.html">← Voltar</a>
+
+        </div>
+    </body>
+</html>
