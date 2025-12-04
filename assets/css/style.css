@@ -122,7 +122,7 @@ main {
     border-radius: 8px;
 }
 
-.intro a {
+.intro a, .about a {
     color: #faef56;
     font-weight: bold;
     text-decoration: underline;
